@@ -30,14 +30,14 @@ console.log(greeting_with_age("Cat", 2001, "Dog", 2003, "Bird", 2005));
 
 // Challenge
 // Part 1 - 3
-
-const grading = (score) => {
+// use switch case
+const grading_switch = (score) => {
 	switch (true) {
 		case score == 11:
 			return "Perfect";
 		case score < 11 && score >= 9:
 			return "Excellent";
-		case score < 8 && score >= 5:
+		case score < 9 && score >= 5:
 			return true;
 		case score < 5 && score >= 0:
 			return false;
@@ -45,4 +45,18 @@ const grading = (score) => {
 			return "Error!";
 	}
 };
-console.log(grading(13));
+console.log(grading_switch(11));
+
+// use if-else
+const grading_if = (score) => {
+	score == 11
+		? console.log("Perfect")
+		: score < 11 && score >= 9
+		? console.log("Excellent")
+		: score < 9 && score >= 5
+		? console.log(true)
+		: score < 5 && score >= 0
+		? console.log(false)
+		: console.log("Error!");
+};
+grading_if(12);
